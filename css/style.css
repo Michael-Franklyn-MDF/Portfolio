@@ -297,9 +297,22 @@ main {
 		padding: 0.5em 1em;
 	}
 	.nav-links {
+		position: fixed;
+		top: 56px;
+		right: 0;
+		left: 0;
+		background: var(--background);
 		display: none;
+		flex-direction: column;
+		gap: 0;
+		padding: 0.75em 1em 1em 1em;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 	}
 	.hamburger {
+		display: flex;
+	}
+	/* Show menu when open */
+	body.menu-open .nav-links {
 		display: flex;
 	}
 	main {
