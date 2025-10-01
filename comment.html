@@ -28,21 +28,21 @@
     <section class="preview visible">
       <h3>Let’s Talk</h3>
       <p>Have feedback or want to work together? Leave a message below.</p>
-      <form class="comment-form" style="display:flex; flex-direction:column; gap:0.75em; text-align:left;">
+      <form class="comment-form">
         <label>
           Name
-          <input type="text" name="name" required style="width:100%; padding:0.6em; border-radius:8px; border:1px solid #ddd;" />
+          <input type="text" name="name" required />
         </label>
         <label>
           Email
-          <input type="email" name="email" required style="width:100%; padding:0.6em; border-radius:8px; border:1px solid #ddd;" />
+          <input type="email" name="email" required />
         </label>
         <label>
           Message
-          <textarea name="message" rows="5" required style="width:100%; padding:0.6em; border-radius:8px; border:1px solid #ddd;"></textarea>
+          <textarea name="message" rows="5" required></textarea>
         </label>
         <button type="submit" class="btn">Send</button>
-        <p id="form-status" style="margin:0.25em 0 0; font-size:0.95em;"></p>
+        <p id="form-status"></p>
       </form>
     </section>
   </main>
