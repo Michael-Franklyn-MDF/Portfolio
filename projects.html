@@ -8,6 +8,59 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Content will be added later -->
+  <nav class="navbar">
+    <div class="nav-logo">Michael Franklyn</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="comment.html">Leave Comments</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-moon"></span></button>
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main style="padding-top:6em; max-width:1000px; margin:0 auto; padding-left:1em; padding-right:1em;">
+    <section class="preview visible" style="text-align:center;">
+      <h3>Projects</h3>
+      <div class="project-cards" style="flex-wrap: wrap;">
+        <div class="card" style="width: 280px;">
+          <img src="images/project1.jpg" alt="Project 1" />
+          <h4>Restaurant Website</h4>
+          <p>A clean restaurant site with menus and descriptions.</p>
+          <a class="btn" href="https://michael-franklyn-mdf.github.io/Photography-website/" target="_blank">Live Demo</a>
+        </div>
+        <div class="card" style="width: 280px;">
+          <img src="images/project2.jpg" alt="Project 2" />
+          <h4>Akan Name Generator</h4>
+          <p>Generates Akan names based on birthday inputs.</p>
+          <a class="btn" href="https://michael-franklyn-mdf.github.io/akan-name-generator/" target="_blank">Live Demo</a>
+        </div>
+        <div class="card" style="width: 280px;">
+          <img src="images/project3.jpg" alt="Project 3" />
+          <h4>Project Three</h4>
+          <p>Another cool project coming soon.</p>
+          <a class="btn" href="#" target="_blank">Preview</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Michael Franklyn</p>
+      <div class="footer-social">
+        <a href="#" aria-label="GitHub"><img src="images/github.svg" alt="GitHub" /></a>
+        <a href="#" aria-label="Instagram"><img src="images/instagram.svg" alt="instagram" /></a>
+        <a href="#" aria-label="Whatsapp"><img src="images/whatsapp.svg" alt="Whatsapp" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
