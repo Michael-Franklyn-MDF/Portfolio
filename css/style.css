@@ -22,7 +22,8 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	transition: background-color 0.3s ease, color 0.3s ease;
+	transform: translateY(0);
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease;
 }
 
 /* Dark mode support */
@@ -39,6 +40,18 @@ body.dark-mode {
 	--shadow: rgba(0, 0, 0, 0.3);
 	--shadow-hover: rgba(0, 0, 0, 0.4);
 	--card-shadow: rgba(0, 0, 0, 0.2);
+}
+/* Smooth page slide-in/out */
+html.page-preload body {
+	transform: translateY(16px);
+}
+@media (prefers-reduced-motion: reduce) {
+	body {
+		transition: none;
+	}
+	html.page-preload body {
+		transform: none;
+	}
 }
 /* Prevent dark-mode flash: apply dark variables early if html has preload flag */
 html.preload-dark {
@@ -66,7 +79,7 @@ html.preload-dark {
 	font-weight: 600;
 	cursor: pointer;
 	box-shadow: 0 2px 8px var(--shadow);
-	transition: all 0.3s ease;
+	transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
 	text-decoration: none;
 	display: inline-block;
 }
@@ -406,14 +419,42 @@ main {
 	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 	padding: 1em;
 	width: 160px;
-	transition: box-shadow 0.3s, transform 0.3s;
+	transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
 	cursor: pointer;
 	border: 1px solid var(--border);
 }
 .card:hover {
 	box-shadow: 0 8px 32px var(--shadow-hover);
-	transform: translateY(-8px) scale(1.02);
+	transform: translateY(-6px) scale(1.015);
 	border-color: var(--accent);
+}
+
+/* Micro-interactions: subtle press effect */
+.btn:active, button:active {
+	transform: translateY(1px);
+}
+.card:active {
+	transform: translateY(-2px) scale(1.005);
+}
+
+/* Link hovers */
+.nav-links a {
+	position: relative;
+}
+.nav-links a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -4px;
+	height: 2px;
+	background: var(--accent);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.2s ease;
+}
+.nav-links a:hover::after, .nav-links a:focus::after {
+	transform: scaleX(1);
 }
 .card img {
 	width: 100%;

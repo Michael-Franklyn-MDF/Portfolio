@@ -15,8 +15,10 @@
 			themeToggleButton.setAttribute('aria-label', 'Switch to light mode');
 		}
 	}
-	// Remove preload class to avoid lingering state after initial paint
-	document.documentElement.classList.remove('preload-dark');
+	// Remove preload classes to reveal page (no-flash + page fade-in)
+	const root = document.documentElement;
+	root.classList.remove('preload-dark');
+	root.classList.remove('page-preload');
 
 	// Toggle theme
 	if (themeToggleButton) {
@@ -73,4 +75,22 @@
 	}, { threshold: 0.2 });
 
 	previews.forEach((el) => observer.observe(el));
+})();
+
+(function initSmoothPageTransitions(){
+	// Intercept internal links and fade out before navigation
+	const root = document.documentElement;
+	function isInternalLink(anchor){
+		const url = new URL(anchor.href, window.location.origin);
+		return url.origin === window.location.origin;
+	}
+		document.addEventListener('click', function(e){
+		const a = e.target.closest('a');
+		if(!a) return;
+		if(a.target === '_blank' || a.hasAttribute('download') || a.getAttribute('href')?.startsWith('#')) return;
+		if(!isInternalLink(a)) return;
+		e.preventDefault();
+		root.classList.add('page-preload');
+		setTimeout(()=>{ window.location.href = a.href; }, 220);
+	});
 })();

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('preload-dark')}}catch(e){}</script>
+  <script>try{var d=document.documentElement;if(localStorage.getItem('theme')==='dark'){d.classList.add('preload-dark')}d.classList.add('page-preload')}catch(e){}</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michael Franklyn | Portfolio</title>
@@ -42,7 +42,7 @@
       </div>
       <div class="hero-image">
         <!-- Optional: Profile photo or illustration -->
-        <img src="images/My Photo.jpg" alt="Michael Franklyn profile" />
+        <img src="images/My Photo.jpg" alt="Michael Franklyn profile" loading="lazy" width="220" height="220" />
       </div>
     </div>
     <div class="hero-gradient"></div>
@@ -108,18 +108,18 @@
   <section id="projects-preview" class="preview fade-in visible">
       <h3>Projects</h3>
       <div class="project-cards">
-        <div class="card">
-          <img src="images/Photography.png" alt="Project 1" />
+        <a class="card" href="project-photography.html" style="text-decoration:none; color:inherit;">
+          <img src="images/Photography.png" alt="Photography website thumbnail" loading="lazy" width="160" height="140" />
           <h4>Project Photography</h4>
           <p class="card-desc">A photography website that lets users view and download photos.</p>
-          <a href="https://michael-franklyn-mdf.github.io/Photography-website/" target="_blank" class="btn accent">Live Demo</a>
-        </div>
-        <div class="card">
-          <img src="images/Akan.png" alt="Project 2" />
+          <span class="btn accent" style="pointer-events:none;">View Case Study</span>
+        </a>
+        <a class="card" href="project-akan.html" style="text-decoration:none; color:inherit;">
+          <img src="images/Akan.png" alt="Akan name generator thumbnail" loading="lazy" width="160" height="140" />
           <h4>Project Akan Name Generator</h4>
           <p class="card-desc">An Akan name generator that gives names based on a user's date of birth.</p>
-          <a href="https://michael-franklyn-mdf.github.io/akan-name-generator/" target="_blank" class="btn accent">Live Demo</a>
-        </div>
+          <span class="btn accent" style="pointer-events:none;">View Case Study</span>
+        </a>
       </div>
       <a href="projects.html" class="btn accent">See All Projects</a>
     </section>

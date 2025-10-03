@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('preload-dark')}}catch(e){}</script>
+  <script>try{var d=document.documentElement;if(localStorage.getItem('theme')==='dark'){d.classList.add('preload-dark')}d.classList.add('page-preload')}catch(e){}</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me | Portfolio</title>
@@ -10,7 +10,10 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="nav-logo">Michael Franklyn</div>
+    <div class="nav-left">
+      <div class="nav-logo">Michael Franklyn</div>
+      <button id="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-moon"></span></button>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Me</a></li>
@@ -18,7 +21,6 @@
       <li><a href="comment.html">Leave Comments</a></li>
     </ul>
     <div class="nav-actions">
-      <button id="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-moon"></span></button>
       <button class="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>

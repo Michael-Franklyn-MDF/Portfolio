@@ -1,11 +1,10 @@
-<!-- Projects Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <script>try{var d=document.documentElement;if(localStorage.getItem('theme')==='dark'){d.classList.add('preload-dark')}d.classList.add('page-preload')}catch(e){}</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Portfolio</title>
+  <title>Project Title | Case Study</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,27 +27,33 @@
   </nav>
 
   <main style="padding-top:6em; max-width:1000px; margin:0 auto; padding-left:1em; padding-right:1em;">
-    <section class="preview visible" style="text-align:center;">
-      <h3>Projects</h3>
-      <div class="project-cards" style="flex-wrap: wrap;">
-        <a class="card" style="width: 280px; text-decoration:none; color:inherit;" href="project-photography.html">
-          <img src="images/Photography.png" alt="Photography website thumbnail" loading="lazy" width="280" height="180" />
-          <h4>Photography Website</h4>
-          <p>A gallery with view and download capabilities.</p>
-          <span class="btn" style="pointer-events:none;">View Case Study</span>
-        </a>
-        <a class="card" style="width: 280px; text-decoration:none; color:inherit;" href="project-akan.html">
-          <img src="images/Akan.png" alt="Akan name generator thumbnail" loading="lazy" width="280" height="180" />
-          <h4>Akan Name Generator</h4>
-          <p>Generates Akan names based on birthday inputs.</p>
-          <span class="btn" style="pointer-events:none;">View Case Study</span>
-        </a>
-        <div class="card" style="width: 280px;">
-          <img src="images/project3.jpg" alt="Project 3" />
-          <h4>Project Three</h4>
-          <p>Another cool project coming soon.</p>
-          <a class="btn" href="#" target="_blank">Preview</a>
-        </div>
+    <section class="preview visible" style="text-align:left;">
+      <h3>Project Title</h3>
+      <p class="tagline">Short one-line description</p>
+      <div style="display:grid; grid-template-columns: 1fr; gap:1em;">
+        <img src="images/project-placeholder.png" alt="Project screenshot" style="width:100%; border-radius:12px;" loading="lazy" width="1000" height="600">
+      </div>
+
+      <h4 style="margin-top:1em; color:var(--primary);">Overview</h4>
+      <p>Summarize the problem, your goals, and the solution provided.</p>
+
+      <h4 style="margin-top:1em; color:var(--primary);">Role & Responsibilities</h4>
+      <ul>
+        <li>Role: Developer/Designer</li>
+        <li>Responsibilities: Feature implementation, UI, performance</li>
+      </ul>
+
+      <h4 style="margin-top:1em; color:var(--primary);">Tech Stack</h4>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+      </ul>
+
+      <h4 style="margin-top:1em; color:var(--primary);">Challenges & Learnings</h4>
+      <p>Key challenges you faced and what you learned solving them.</p>
+
+      <div style="display:flex; gap:0.5em; margin-top:1em; flex-wrap:wrap;">
+        <a class="btn" href="#" target="_blank">Live Demo</a>
+        <a class="btn secondary" href="projects.html">Back to Projects</a>
       </div>
     </section>
   </main>
@@ -67,3 +72,5 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
+
