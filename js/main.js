@@ -15,6 +15,8 @@
 			themeToggleButton.setAttribute('aria-label', 'Switch to light mode');
 		}
 	}
+	// Remove preload class to avoid lingering state after initial paint
+	document.documentElement.classList.remove('preload-dark');
 
 	// Toggle theme
 	if (themeToggleButton) {
