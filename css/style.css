@@ -338,6 +338,12 @@ main {
 .skill-icon {
 	font-size: 1.2em;
 }
+.skill-icon img {
+	width: 28px;
+	height: 28px;
+	display: block;
+	object-fit: contain;
+}
 .skill-name {
 	font-weight: 700;
 	font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
@@ -365,6 +371,10 @@ main {
 @media (max-width: 600px) {
 	.skills-grid {
 		grid-template-columns: 1fr;
+	}
+	.skill-icon img {
+		width: 24px;
+		height: 24px;
 	}
 }
 
