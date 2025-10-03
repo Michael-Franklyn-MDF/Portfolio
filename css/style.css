@@ -84,6 +84,11 @@ body.dark-mode {
 	border-bottom: 1px solid var(--border);
 	transition: all 0.3s ease;
 }
+.nav-left {
+	display: flex;
+	align-items: center;
+	gap: 0.75em;
+}
 .nav-logo {
 	font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
 	font-weight: 900;
@@ -119,17 +124,47 @@ body.dark-mode {
 	gap: 1em;
 }
 #theme-toggle {
-	background: none;
-	border: none;
-	font-size: 1.2em;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	width: 40px;
+	height: 40px;
+	border-radius: 9999px;
+	display: grid;
+	place-items: center;
+	font-size: 1.25em;
 	cursor: pointer;
 	color: var(--primary);
+	box-shadow: 0 2px 8px var(--shadow);
+	padding: 0;
 }
 .icon-moon:before {
 	content: '\1F319'; /* moon emoji */
 }
 .icon-sun:before {
 	content: '\2600'; /* sun emoji */
+}
+
+/* Improve hover/focus visibility for theme toggle */
+#theme-toggle:hover {
+	background: var(--primary);
+	color: #ffffff;
+	box-shadow: 0 4px 16px var(--shadow-hover);
+}
+#theme-toggle:focus {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
+}
+
+/* Keep some breathing room on small screens */
+@media (max-width: 700px) {
+	.nav-actions {
+		gap: 0.75em;
+	}
+	#theme-toggle {
+		width: 36px;
+		height: 36px;
+		font-size: 1.1em;
+	}
 }
 .hamburger {
 	display: none;
@@ -157,6 +192,16 @@ body.dark-mode {
 	padding-top: 5em;
 	background: linear-gradient(135deg, var(--background) 0%, var(--surface) 50%, var(--background) 100%);
 	overflow: hidden;
+}
+.hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -1px;
+	height: 120px;
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, var(--background) 100%);
+	pointer-events: none;
 }
 .hero-content {
 	display: flex;
@@ -236,6 +281,7 @@ body.dark-mode {
 	max-width: 700px;
 	width: 100%;
 	text-align: center;
+	margin: 2em auto;
 	opacity: 0;
 	transform: translateY(40px);
 	transition: opacity 0.8s, transform 0.8s;
@@ -270,7 +316,7 @@ body.dark-mode {
 	margin-bottom: 1em;
 }
 .card {
-	background: #fff;
+	background: var(--surface);
 	border-radius: 12px;
 	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 	padding: 1em;
@@ -297,6 +343,13 @@ body.dark-mode {
 	font-weight: 700;
 	color: var(--primary);
 	margin-bottom: 0.5em;
+}
+
+.card .card-desc {
+	font-size: 0.95em;
+	color: var(--text-muted);
+	line-height: 1.5;
+	margin: 0 0 0.8em 0;
 }
 
 /* Form Styling */
@@ -393,6 +446,9 @@ body.dark-mode {
 @media (max-width: 700px) {
 	.navbar {
 		padding: 0.5em 1em;
+	}
+	.nav-left {
+		gap: 0.5em;
 	}
 	.nav-links {
 		position: fixed;
