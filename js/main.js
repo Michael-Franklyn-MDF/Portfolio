@@ -54,6 +54,17 @@
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				entry.target.classList.add('visible');
+				// Animate skill bars if any are inside this preview
+				if (entry.target.id === 'skills') {
+					const bars = entry.target.querySelectorAll('.skill-bar');
+					bars.forEach((bar) => {
+						const level = parseInt(bar.getAttribute('data-level') || '0', 10);
+						const span = bar.querySelector('span');
+						if (span) {
+							span.style.width = Math.max(0, Math.min(level, 100)) + '%';
+						}
+					});
+				}
 				observer.unobserve(entry.target);
 			}
 		});
