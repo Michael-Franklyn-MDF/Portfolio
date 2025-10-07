@@ -5,6 +5,7 @@
 	const themeToggleButton = document.getElementById('theme-toggle');
 	const hamburgerButton = document.querySelector('.hamburger');
 	const navLinks = document.querySelector('.nav-links');
+    const navbar = document.querySelector('.navbar');
 
 	// Persisted theme from localStorage
 	const savedTheme = localStorage.getItem('theme');
@@ -15,6 +16,9 @@
 			themeToggleButton.setAttribute('aria-label', 'Switch to light mode');
 		}
 	}
+
+	// Enable global stripes background (toggle here if you want to control per page)
+	body.classList.add('stripes-bg');
 	// Remove preload classes to reveal page (no-flash + page fade-in)
 	const root = document.documentElement;
 	root.classList.remove('preload-dark');
@@ -47,6 +51,16 @@
 			}
 		});
 	}
+
+	// Navbar scrolled state
+	if (navbar) {
+		const onScroll = () => {
+			const scrolled = window.scrollY > 10;
+			navbar.classList.toggle('scrolled', scrolled);
+		};
+		onScroll();
+		window.addEventListener('scroll', onScroll, { passive: true });
+	}
 })();
 
 (function initPreviewReveal() {
@@ -75,6 +89,51 @@
 	}, { threshold: 0.2 });
 
 	previews.forEach((el) => observer.observe(el));
+})();
+
+(function initHeroStagger(){
+	const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	const hero = document.querySelector('.hero-text');
+	if(!hero) return;
+	const elements = [];
+	const h1 = hero.querySelector('h1');
+	const h2 = hero.querySelector('h2');
+	const p = hero.querySelector('p');
+	const buttons = hero.querySelectorAll('.hero-buttons .btn');
+	[h1, h2, p, ...buttons].forEach((el)=>{ if(el){ el.classList.add('stagger-item'); elements.push(el); }});
+	if(prefersReduced){
+		elements.forEach((el)=> el.classList.add('in'));
+		return;
+	}
+	let delay = 80; // ms between items
+	elements.forEach((el, idx)=>{
+		setTimeout(()=>{ el.classList.add('in'); }, idx * delay + 150);
+	});
+})();
+
+(function initCardTilt(){
+	const cards = document.querySelectorAll('.card');
+	if(cards.length === 0) return;
+	const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	if(prefersReduced) return;
+	cards.forEach((card)=>{
+		let rect;
+		function updateRect(){ rect = card.getBoundingClientRect(); }
+		updateRect();
+		window.addEventListener('resize', updateRect);
+		card.addEventListener('mousemove', (e)=>{
+			const x = e.clientX - rect.left;
+			const y = e.clientY - rect.top;
+			const centerX = rect.width / 2;
+			const centerY = rect.height / 2;
+			const rotateX = ((y - centerY) / centerY) * -4; // tilt up/down
+			const rotateY = ((x - centerX) / centerX) * 4; // tilt left/right
+			card.style.transform = `translateY(-6px) scale(1.015) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+		});
+		card.addEventListener('mouseleave', ()=>{
+			card.style.transform = '';
+		});
+	});
 })();
 
 (function initSmoothPageTransitions(){

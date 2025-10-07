@@ -11,6 +11,9 @@
 	--shadow: rgba(0, 0, 0, 0.08);
 	--shadow-hover: rgba(0, 0, 0, 0.12);
 	--card-shadow: rgba(0, 0, 0, 0.06);
+	/* Subtle stripe colors for background utility */
+	--stripe1: #f3f4f6; /* near #eee */
+	--stripe2: #e5e7eb; /* near #ccc */
 }
 
 body {
@@ -41,6 +44,8 @@ body.dark-mode {
 	--shadow: rgba(0, 0, 0, 0.3);
 	--shadow-hover: rgba(0, 0, 0, 0.4);
 	--card-shadow: rgba(0, 0, 0, 0.2);
+	--stripe1: #171717;
+	--stripe2: #0f0f0f;
 }
 /* Smooth page slide-in/out */
 html.page-preload body {
@@ -55,10 +60,18 @@ html.page-preload body {
 		transform: none;
 		opacity: 1;
 	}
+    .stagger-item, .stagger-item.in {
+        transition: none;
+    }
 }
 /* Smooth in-page anchor scrolling */
 html {
 	scroll-behavior: smooth;
+}
+/* Optional stripes background utility; apply with body.stripes-bg */
+body.stripes-bg {
+	background-image: repeating-radial-gradient(circle at bottom right, var(--stripe1), var(--stripe2) 50px);
+	background-attachment: fixed;
 }
 /* Prevent dark-mode flash: apply dark variables early if html has preload flag */
 html.preload-dark {
@@ -121,6 +134,12 @@ html.preload-dark {
 	z-index: 100;
 	border-bottom: 1px solid var(--border);
 	transition: all 0.3s ease;
+}
+/* Navbar animation on scroll */
+.navbar.scrolled {
+	padding: 0.5em 2em;
+	box-shadow: 0 6px 20px var(--shadow-hover);
+	opacity: 0.98;
 }
 .nav-left {
 	display: flex;
@@ -275,6 +294,16 @@ html.preload-dark {
 	display: flex;
 	gap: 1em;
 }
+/* Hero stagger animation */
+.stagger-item {
+	opacity: 0;
+	transform: translateY(16px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.stagger-item.in {
+	opacity: 1;
+	transform: translateY(0);
+}
 .btn.primary {
 	background: var(--primary);
 }
@@ -419,6 +448,7 @@ main {
 	gap: 1.5em;
 	justify-content: center;
 	margin-bottom: 1em;
+	perspective: 1000px;
 }
 .card {
 	background: var(--surface);
@@ -429,6 +459,8 @@ main {
 	transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
 	cursor: pointer;
 	border: 1px solid var(--border);
+	transform-style: preserve-3d;
+	will-change: transform;
 }
 .card:hover {
 	box-shadow: 0 8px 32px var(--shadow-hover);
