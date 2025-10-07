@@ -23,7 +23,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	transform: translateY(0);
-	transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease;
+	opacity: 1;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease, opacity 0.25s ease;
 }
 
 /* Dark mode support */
@@ -44,6 +45,7 @@ body.dark-mode {
 /* Smooth page slide-in/out */
 html.page-preload body {
 	transform: translateY(16px);
+	opacity: 0;
 }
 @media (prefers-reduced-motion: reduce) {
 	body {
@@ -51,7 +53,12 @@ html.page-preload body {
 	}
 	html.page-preload body {
 		transform: none;
+		opacity: 1;
 	}
+}
+/* Smooth in-page anchor scrolling */
+html {
+	scroll-behavior: smooth;
 }
 /* Prevent dark-mode flash: apply dark variables early if html has preload flag */
 html.preload-dark {
