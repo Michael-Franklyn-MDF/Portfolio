@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>try{var d=document.documentElement;if(localStorage.getItem('theme')==='dark'){d.classList.add('preload-dark')}d.classList.add('page-preload')}catch(e){}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To‑Do List | Case Study</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="nav-logo">Michael Franklyn</div>
+      <button id="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-moon"></span></button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="comment.html">Leave Comments</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main style="padding-top:6em; max-width:1000px; margin:0 auto; padding-left:1em; padding-right:1em;">
+    <section class="preview visible" style="text-align:left;">
+      <h3>To‑Do List</h3>
+      <p class="tagline">Click a task to mark it as done</p>
+      <div style="display:grid; grid-template-columns: 1fr; gap:1em;">
+        <img src="images/js.png" alt="To-Do List thumbnail" style="width:120px; border-radius:12px;" loading="lazy" width="120" height="120">
+      </div>
+      <h4 style="margin-top:1em; color:var(--primary);">Overview</h4>
+      <p>A lightweight task manager demonstrating list creation, completion toggles, and simple persistence patterns suitable for small projects.</p>
+      <h4 style="margin-top:1em; color:var(--primary);">Stack</h4>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+      </ul>
+      <div style="display:flex; gap:0.5em; margin-top:1em; flex-wrap:wrap;">
+        <a class="btn" href="https://michael-franklyn-mdf.github.io/To-Do-List/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        <a class="btn secondary" href="projects.html">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Michael Franklyn</p>
+      <div class="footer-social">
+        <a href="#" aria-label="GitHub"><img src="images/github.png" alt="GitHub" /></a>
+        <a href="#" aria-label="Instagram"><img src="images/instagram.png" alt="instagram" /></a>
+        <a href="#" aria-label="Whatsapp"><img src="images/whatsapp.png" alt="Whatsapp" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
