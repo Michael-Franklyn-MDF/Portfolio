@@ -31,7 +31,7 @@
       <h3>To‑Do List</h3>
       <p class="tagline">Click a task to mark it as done</p>
       <div style="display:grid; grid-template-columns: 1fr; gap:1em;">
-        <img src="images/To-Do List.png" alt="To-Do List thumbnail" style="width:120px; border-radius:12px;" loading="lazy" width="120" height="120">
+        <img src="images/To-Do List.png" alt="To-Do List thumbnail" style="width:120px; border-radius:12px;" loading="lazy" decoding="async" width="120" height="120" onerror="this.onerror=null;this.src='images/js.png';">
       </div>
       <h4 style="margin-top:1em; color:var(--primary);">Overview</h4>
       <p>A lightweight task manager demonstrating list creation, completion toggles, and simple persistence patterns suitable for small projects.</p>
@@ -39,8 +39,24 @@
       <ul>
         <li>HTML, CSS, JavaScript</li>
       </ul>
+      <h4 style="margin-top:1em; color:var(--primary);">Features</h4>
+      <ul>
+        <li>Add and remove tasks</li>
+        <li>Click a task to mark as done</li>
+        <li>Clean, responsive UI</li>
+      </ul>
+      <h4 style="margin-top:1em; color:var(--primary);">How it works</h4>
+      <ol>
+        <li>Enter a task and submit to add it to the list.</li>
+        <li>Click on a task item to toggle its completed state.</li>
+        <li>Use the remove action to delete items you no longer need.</li>
+      </ol>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:0.8em; margin-top:1em;">
+        <img src="images/To-Do List.png" alt="To-Do List screenshot" loading="lazy" decoding="async" width="480" height="300" style="width:100%; border-radius:12px; box-shadow: 0 4px 20px var(--card-shadow);" onerror="this.onerror=null;this.src='images/js.png';">
+      </div>
       <div style="display:flex; gap:0.5em; margin-top:1em; flex-wrap:wrap;">
         <a class="btn" href="https://michael-franklyn-mdf.github.io/To-Do-List/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        <a class="btn" href="https://github.com/michael-franklyn-mdf/To-Do-List" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a class="btn secondary" href="projects.html">Back to Projects</a>
       </div>
     </section>

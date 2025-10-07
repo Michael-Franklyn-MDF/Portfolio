@@ -113,6 +113,15 @@ html.preload-dark {
 	outline: 2px solid var(--primary);
 	outline-offset: 2px;
 }
+/* Prefer visible focus for keyboard users */
+:focus:not(:focus-visible) {
+	outline: none;
+}
+:focus-visible {
+	outline: 3px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: 6px;
+}
 
 .highlight {
 	color: var(--accent);
