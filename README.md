@@ -4,6 +4,18 @@ A modern and responsive personal portfolio website built to showcase my projects
 
 ---
 
+## Table of Contents
+
+- [🚀 Purpose](#-purpose)
+- [🛠️ Technologies Used](#️-technologies-used)
+- [✨ Features](#-features)
+- [🧩 Structure](#-structure)
+- [🌐 Live Demo](#-live-demo)
+- [📬 Contact](#-contact)
+- [📄 License](#-license)
+
+---
+
 ## 🚀 Purpose
 
 This project serves as my personal portfolio site — a digital space to highlight my technical abilities, creative projects, and professional journey in web development.
