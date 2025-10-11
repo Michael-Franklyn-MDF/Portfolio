@@ -10,8 +10,8 @@ A modern and responsive personal portfolio website built to showcase my projects
 - [🛠️ Technologies Used](#️-technologies-used)
 - [✨ Features](#-features)
 - [🧩 Structure](#-structure)
-- [Problems Faced](#problems-faced)
-- [Solutions Made](#solutions-made)
+- [😭 Problems Faced](#problems-faced)
+- [😁 Solutions Made](#solutions-made)
 - [🌐 Live Demo](#-live-demo)
 - [📬 Contact](#-contact)
 - [📄 License](#-license)
@@ -68,7 +68,7 @@ Michael-Franklyn-Portfolio
 
 ---
 
-## 😭Problems Faced
+## 😭 Problems Faced
 
 - **Styling** - Some Pages didn't get the styling for the CSS file.
 - **Script** - Some Pages didn't get the interactivity required in the page.
@@ -76,11 +76,11 @@ Michael-Franklyn-Portfolio
 
 ---
 
-## 😁Solutions Made
+## 😁 Solutions Made
 
 - **Styling** - Inline styling was required to solve the issue of pages not collecting the styling, due to clutter.
 - **Script** - Inline scripting was required to solve the issue of pages not collecting the required interactivity.
-- **Placements** - Relocation of the button was made near the logo.
+- **Placements** - The Relocation of the button was made near the logo.
 
 ---
 ## 🌐 Live Demo
