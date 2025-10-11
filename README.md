@@ -47,6 +47,21 @@ This project serves as my personal portfolio site — a digital space to highlig
 
 ---
 
+## Problems Faced
+
+- **Styling** - Some Pages didn't get the styling for the CSS file.
+- **Script** - Some Pages didn't get the interactivity required in the page.
+- **Placement** - The Dark/Light mode button was hidden in certain @media 's.
+
+---
+
+## Solutions Made
+
+- **Styling** - Inline styling was required to solve the issue of pages not collecting the styling, due to culuter.
+- **Script** - Inline scripting was required to solve the issue of pages not collecting the reqired interactivity.
+- **Placements** - Rellocation of the button was made near the logo.
+
+---
 ## 🌐 Live Demo
 
 👉 https://github.com/Michael-Franklyn-MDF/Portfolio  
