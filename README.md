@@ -45,10 +45,21 @@ This project serves as my personal portfolio site — a digital space to highlig
 
 ## 🧩 Structure
 
-- --Index.html
-- --About.html
-- --
-
+- --**index.html**
+- --**about.html**
+- --**comment.html**
+- --**projects.html**
+- --**project-akan.html**
+- --**project-photography.html**
+- --**project-todo.html**
+- --**project-LifeTrack**
+- --js -
+        |_ **main.js**
+- --images -
+            |_Images for the portfolio
+- --css -
+         |_**styles.css**
+         
 ---
 
 ## Problems Faced
