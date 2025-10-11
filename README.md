@@ -10,7 +10,7 @@ A modern and responsive personal portfolio website built to showcase my projects
 - [🛠️ Technologies Used](#️-technologies-used)
 - [✨ Features](#-features)
 - [🧩 Structure](#-structure)
-- [Problems Faced](#-problems-faced)
+- [Problems Faced](https://github.com/Michael-Franklyn-MDF/Portfolio/blob/main/README.md#problems-faced)
 - [Solutions Made](#-solutions-made)
 - [🌐 Live Demo](#-live-demo)
 - [📬 Contact](#-contact)
