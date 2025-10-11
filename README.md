@@ -10,6 +10,8 @@ A modern and responsive personal portfolio website built to showcase my projects
 - [🛠️ Technologies Used](#️-technologies-used)
 - [✨ Features](#-features)
 - [🧩 Structure](#-structure)
+- [Problems Faced](#-problems-faced)
+- [Solutions Made](#-solutions-made)
 - [🌐 Live Demo](#-live-demo)
 - [📬 Contact](#-contact)
 - [📄 License](#-license)
