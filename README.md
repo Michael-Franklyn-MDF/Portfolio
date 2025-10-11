@@ -45,21 +45,26 @@ This project serves as my personal portfolio site — a digital space to highlig
 
 ## 🧩 Structure
 
-- --**index.html**
-- --**about.html**
-- --**comment.html**
-- --**projects.html**
-- --**project-akan.html**
-- --**project-photography.html**
-- --**project-todo.html**
-- --**project-LifeTrack**
-- --js -
-        |_ **main.js**
-- --images -
-            |_Images for the portfolio
-- --css -
-         |_**styles.css**
-         
+Michael-Franklyn-Portfolio/
+│
+├── index.html
+├── about.html
+├── projects.html
+├── comment.html
+├── project-akan.html
+├── project-photography.html
+├── project-todo.html
+├── project-LifeTrack.html
+│
+├── css/
+│   └── styles.css
+│
+├── js/
+│   └── main.js
+│
+└── images/
+    └── Images for the portfolio
+
 ---
 
 ## Problems Faced
