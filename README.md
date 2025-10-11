@@ -45,7 +45,9 @@ This project serves as my personal portfolio site — a digital space to highlig
 
 ## 🧩 Structure
 
-
+- --Index.html
+- --About.html
+- --
 
 ---
 
