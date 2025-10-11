@@ -37,7 +37,7 @@ This project serves as my personal portfolio site — a digital space to highlig
 
 ## 🌐 Live Demo
 
-👉 [View Portfolio on GitHub Pages]https://github.com/Michael-Franklyn-MDF/Portfolio  
+👉 https://github.com/Michael-Franklyn-MDF/Portfolio  
 
 
 ---
@@ -46,7 +46,7 @@ This project serves as my personal portfolio site — a digital space to highlig
 
 Feel free to connect or collaborate:  
 **Email:** michaeldavidfranklyn@gmail.com  
-**GitHub:** [github.com/yourusername]https://github.com/Michael-Franklyn-MDF
+**GitHub:** https://github.com/Michael-Franklyn-MDF
 
 ---
 
