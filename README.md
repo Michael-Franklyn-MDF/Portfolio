@@ -31,3 +31,29 @@ This project serves as my personal portfolio site — a digital space to highlig
 
 ## 🧩 Structure
 
+
+
+---
+
+## 🌐 Live Demo
+
+👉 [View Portfolio on GitHub Pages]https://github.com/Michael-Franklyn-MDF/Portfolio  
+
+
+---
+
+## 📬 Contact
+
+Feel free to connect or collaborate:  
+**Email:** michaeldavidfranklyn@gmail.com  
+**GitHub:** [github.com/yourusername]https://github.com/Michael-Franklyn-MDF
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub!
