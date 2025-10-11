@@ -47,7 +47,6 @@ This project serves as my personal portfolio site — a digital space to highlig
 
 Michael-Franklyn-Portfolio
 
-
 │
 ├── index.html
 ├── about.html
@@ -79,9 +78,9 @@ Michael-Franklyn-Portfolio
 
 ## Solutions Made
 
-- **Styling** - Inline styling was required to solve the issue of pages not collecting the styling, due to culuter.
-- **Script** - Inline scripting was required to solve the issue of pages not collecting the reqired interactivity.
-- **Placements** - Rellocation of the button was made near the logo.
+- **Styling** - Inline styling was required to solve the issue of pages not collecting the styling, due to clutter.
+- **Script** - Inline scripting was required to solve the issue of pages not collecting the required interactivity.
+- **Placements** - Relocation of the button was made near the logo.
 
 ---
 ## 🌐 Live Demo
