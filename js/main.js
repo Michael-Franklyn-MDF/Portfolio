@@ -49,16 +49,6 @@
 			}
 		});
 	}
-
-	// Navbar scrolled state
-	if (navbar) {
-		const onScroll = () => {
-			const scrolled = window.scrollY > 10;
-			navbar.classList.toggle('scrolled', scrolled);
-		};
-		onScroll();
-		window.addEventListener('scroll', onScroll, { passive: true });
-	}
 })();
 
 (function initPreviewReveal() {
