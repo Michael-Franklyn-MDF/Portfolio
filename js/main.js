@@ -51,34 +51,6 @@
 	}
 })();
 
-(function initPreviewReveal() {
-	// Graceful enhancement: reveal preview sections on scroll
-	const previews = document.querySelectorAll('.preview');
-	if (!('IntersectionObserver' in window) || previews.length === 0) return;
-
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add('visible');
-				// Animate skill bars if any are inside this preview
-				if (entry.target.id === 'skills') {
-					const bars = entry.target.querySelectorAll('.skill-bar');
-					bars.forEach((bar) => {
-						const level = parseInt(bar.getAttribute('data-level') || '0', 10);
-						const span = bar.querySelector('span');
-						if (span) {
-							span.style.width = Math.max(0, Math.min(level, 100)) + '%';
-						}
-					});
-				}
-				observer.unobserve(entry.target);
-			}
-		});
-	}, { threshold: 0.2 });
-
-	previews.forEach((el) => observer.observe(el));
-})();
-
 (function initHeroStagger(){
 	const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	const hero = document.querySelector('.hero-text');
