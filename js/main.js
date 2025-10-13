@@ -71,36 +71,3 @@
 	});
 })();
 
-(function initSmoothPageTransitions(){
-	// Intercept internal links and fade out before navigation
-	const root = document.documentElement;
-	function isInternalLink(anchor){
-		const url = new URL(anchor.href, window.location.origin);
-		return url.origin === window.location.origin;
-	}
-		document.addEventListener('click', function(e){
-		const a = e.target.closest('a');
-		if(!a) return;
-		// Handle in-page anchors with smooth scroll and no page fade
-		const href = a.getAttribute('href') || '';
-		if(href.startsWith('#')){
-			const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-			const targetEl = document.querySelector(href);
-			if(targetEl){
-				e.preventDefault();
-				if(prefersReduced){
-					targetEl.scrollIntoView();
-				}else{
-					targetEl.scrollIntoView({ behavior: 'smooth' });
-				}
-			}
-			return;
-		}
-
-		if(a.target === '_blank' || a.hasAttribute('download')) return;
-		if(!isInternalLink(a)) return;
-		e.preventDefault();
-		root.classList.add('page-preload');
-		setTimeout(()=>{ window.location.href = a.href; }, 220);
-	});
-})();
