@@ -51,23 +51,4 @@
 	}
 })();
 
-(function initHeroStagger(){
-	const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-	const hero = document.querySelector('.hero-text');
-	if(!hero) return;
-	const elements = [];
-	const h1 = hero.querySelector('h1');
-	const h2 = hero.querySelector('h2');
-	const p = hero.querySelector('p');
-	const buttons = hero.querySelectorAll('.hero-buttons .btn');
-	[h1, h2, p, ...buttons].forEach((el)=>{ if(el){ el.classList.add('stagger-item'); elements.push(el); }});
-	if(prefersReduced){
-		elements.forEach((el)=> el.classList.add('in'));
-		return;
-	}
-	let delay = 80; // ms between items
-	elements.forEach((el, idx)=>{
-		setTimeout(()=>{ el.classList.add('in'); }, idx * delay + 150);
-	});
-})();
 
