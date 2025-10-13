@@ -1,5 +1,3 @@
-// Main JS file for Portfolio Website
-
 (function initThemeToggleAndMenu() {
 	const body = document.body;
 	const themeToggleButton = document.getElementById('theme-toggle');
