@@ -71,31 +71,6 @@
 	});
 })();
 
-(function initCardTilt(){
-	const cards = document.querySelectorAll('.card');
-	if(cards.length === 0) return;
-	const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-	if(prefersReduced) return;
-	cards.forEach((card)=>{
-		let rect;
-		function updateRect(){ rect = card.getBoundingClientRect(); }
-		updateRect();
-		window.addEventListener('resize', updateRect);
-		card.addEventListener('mousemove', (e)=>{
-			const x = e.clientX - rect.left;
-			const y = e.clientY - rect.top;
-			const centerX = rect.width / 2;
-			const centerY = rect.height / 2;
-			const rotateX = ((y - centerY) / centerY) * -4; // tilt up/down
-			const rotateY = ((x - centerX) / centerX) * 4; // tilt left/right
-			card.style.transform = `translateY(-6px) scale(1.015) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-		});
-		card.addEventListener('mouseleave', ()=>{
-			card.style.transform = '';
-		});
-	});
-})();
-
 (function initSmoothPageTransitions(){
 	// Intercept internal links and fade out before navigation
 	const root = document.documentElement;
