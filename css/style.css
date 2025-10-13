@@ -12,8 +12,8 @@
 	--shadow-hover: rgba(0, 0, 0, 0.12);
 	--card-shadow: rgba(0, 0, 0, 0.06);
 	/* Subtle stripe colors for background utility */
-	--stripe1: #f3f4f6; /* near #eee */
-	--stripe2: #e5e7eb; /* near #ccc */
+	--stripe1: #f3f4f6; 
+	--stripe2: #e5e7eb;
 }
 
 body {
