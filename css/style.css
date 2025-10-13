@@ -68,7 +68,6 @@ html.page-preload body {
 html {
 	scroll-behavior: smooth;
 }
-/* Optional stripes background utility; apply with body.stripes-bg */
 body.stripes-bg {
 	background-image: repeating-radial-gradient(circle at bottom right, var(--stripe1), var(--stripe2) 50px);
 	background-attachment: fixed;
@@ -89,7 +88,7 @@ html.preload-dark {
 	--card-shadow: rgba(0, 0, 0, 0.2);
 }
 
-/* Example usage for buttons and highlights */
+/* usage for buttons and highlights */
 .btn, button {
 	background: var(--primary);
 	color: #fff;
