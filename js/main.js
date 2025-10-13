@@ -109,33 +109,6 @@
 	});
 })();
 
-// Scroll progress bar
-(function initScrollProgress(){
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const bar = document.createElement('div');
-    bar.setAttribute('aria-hidden', 'true');
-    bar.style.position = 'fixed';
-    bar.style.top = '0';
-    bar.style.left = '0';
-    bar.style.height = '3px';
-    bar.style.width = '0%';
-    bar.style.zIndex = '1000';
-    bar.style.background = 'linear-gradient(90deg, var(--primary), var(--accent))';
-    bar.style.boxShadow = '0 2px 6px var(--shadow)';
-    document.body.appendChild(bar);
-    function update(){
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        bar.style.width = pct + '%';
-    }
-    update();
-    window.addEventListener('scroll', update, { passive: true });
-    if(!prefersReduced){
-        bar.style.transition = 'width 0.15s ease-out';
-    }
-})();
-
 (function initCardTilt(){
 	const cards = document.querySelectorAll('.card');
 	if(cards.length === 0) return;
